@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Listagem de Nomes</h1>
+        <input type="text" id="campo"/>
+        <button onclick="adicionar()">+</button>
+        <ul id="lista">
+        	<!-- Usando a funcao em JS adicione os nomes aqui -->
+        </ul>
+
+        <script>
+            function adicionar() {
+                var myList = document.getElementById("lista");
+                var nome = document.getElementById("campo").value;
+                var node = document.createElement("LI"); 
+                
+                nome = document.createTextNode(nome);
+                node.appendChild(nome);
+                myList.appendChild(node);
+                //como adicionar os nomes a lista de itens???
+                //use DOM
+            }
+        </script>
+
+    </body>
+</html>

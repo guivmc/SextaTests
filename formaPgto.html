@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Forma de Pagamento</h1>
+
+        <table>
+            <tr>
+                <td style="border: solid 1px; padding: 5px 10px;">
+                    <p><input type="radio" name="pgto" value="1" onclick="selecionar()"/> <label>Transferência Bancária</label></p>
+                </td>
+                <td rowspan="6" id="dados" style="width: 75%; border: solid 1px"></td>
+            </tr>
+            <tr>
+                <td style="border: solid 1px; padding: 5px 10px;">
+                    <p><input type="radio" name="pgto" value="2" onclick="selecionar()"/> <label>Boleto</label></p>        
+                </td>
+            </tr>
+            <tr>
+                <td style="border: solid 1px; padding: 5px 10px;">
+                    <p><input type="radio" name="pgto" value="3" onclick="selecionar()"/> <label>Cartão de Débito</label></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: solid 1px; padding: 5px 10px;">
+                    <p><input type="radio" name="pgto" value="4" onclick="selecionar()"/> <label>Cartão de Crédito</label></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: solid 1px; padding: 5px 10px;">
+                    <p><input type="radio" name="pgto" value="5" onclick="selecionar()"/> <label>PagSeguro</label></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: solid 1px; padding: 5px 10px;">
+                    <p><input type="radio" name="pgto" value="6" onclick="selecionar()"/> <label>PayPal</label></p>
+                </td>
+            </tr>
+        </table>
+
+        <script>        
+            function selecionar() {
+                var selected = document.querySelector('input[name="pgto"]:checked').value;
+                var dados = document.getElementById("dados");
+
+                switch (selected)
+                {
+                    case "1":
+                        dados.innerHTML = "";
+                        dados.innerHTML = "<p>Transferência Bancária</p>";
+                        break;
+                    case "2":
+                        dados.innerHTML = "";
+                        dados.innerHTML = "<p>Boleto</p>";
+                        break;
+                    case "3":
+                        dados.innerHTML = "";
+                        dados.innerHTML = "<p>Cartão de Débito</p>";
+                        break;
+                    case "4":
+                        dados.innerHTML = "";
+                        dados.innerHTML = "<p>Cartão de Crédito</p>";
+                        break;
+                    case "5":
+                        dados.innerHTML = "";
+                        dados.innerHTML = "<p>PagSeguro</p>";
+                        break;
+                    case "6":
+                        dados.innerHTML = "";
+                        dados.innerHTML = "<p>PayPal</p>";
+                        break;
+                }
+            }
+        </script>
+
+    </body>
+</html>
